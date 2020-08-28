@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StormEvaluator {
 
-	public static final String STORM_PATH = "/Users/xinwei/Documents/COVE/Storm/stormchecker/1.5.1/bin/storm-pars";
+	public static final String STORM_PATH = "/Users/xxxx/Programs/Storm/stormchecker/1.5.1/bin/storm-pars";
 
 	public static void main(String[] args) {
 
