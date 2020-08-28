@@ -23,27 +23,6 @@ public class AlgorithmB {
 
 /*Start Use of Model and PCTL*/
 
-//		final String property_file = "models/YorkePMC/example2_pctl.pctl";
-//		final String model_file = "models/YorkePMC/example2_model.pm";
-
-//		final String property_file = "models/YorkePMC/Simos_correct_property.pctl";
-//		final String model_file = "models/YorkePMC/Simos_correct_model.pm";
-
-//		final String property_file = "models/YorkePMC/Radu_Simple_FX_property.pctl";
-//		final String model_file = "models/YorkePMC/Radu_Simple_FX_model.pm";
-
-//		final String property_file = "models/YorkePMC/Radu_3_Simple_FX_property.pctl";
-//		final String model_file = "models/YorkePMC/Radu_3_Simple_FX_model.pm";
-
-//		final String property_file = "models/YorkePMC/xinwei_outgoing_property.pctl";
-//		final String model_file = "models/YorkePMC/xinwei_outgoing_model.pm";
-
-//		final String property_file = "models/YorkePMC/xinwei_incoming_property.pctl";
-//		final String model_file = "models/YorkePMC/xinwei_incoming_model.pm";
-		
-//		final String property_file = "models/YorkePMC/xinwei_outgoing_property_v2.pctl";
-//		final String model_file = "models/YorkePMC/xinwei_outgoing_model_v2.pm";
-
 		final String model_file = "models/ePMC/epmc_running_model_p.pm";
 		final String property_file = "models/ePMC/epmc_running_model_p.pctl";
 		
