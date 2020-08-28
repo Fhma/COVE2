@@ -1,0 +1,95 @@
+dtmc
+  const double p12; 
+  const double p11;  
+  const double p14;  
+  const double p13;  
+  const double p15;  
+  const double y1;  
+  const double y2;  
+  const double p41;  
+  const double p21;  
+  const double p43;  
+  const double p42;  
+  const double p45;  
+  const double p23;  
+  const double p44;  
+  const double p22;  
+  const double p25;  
+  const double p24;  
+  const double z1;  
+  const double x;  
+  const double z2;  
+ 
+ const double PX_0_1 = ((x)); 
+  const double PX_0_2 = (((-1)*x+1));
+ const double PX_1_3 = ((p11)); 
+  const double PX_1_4 = (((-1)*p11+1));
+ const double PX_2_5 = ((p21)); 
+  const double PX_2_6 = (((-1)*p21+1));
+ const double PX_4_7 = ((p41)); 
+  const double PX_4_8 = (((-1)*p41+1));
+ const double PX_7_9 = ((y2)); 
+  const double PX_7_10 = (((-1)*y1-y2+1));
+  const double PX_7_11 = ((y1));
+ const double PX_8_12 = ((z2)); 
+  const double PX_8_13 = (((-1)*z1-z2+1));
+  const double PX_8_14 = ((z1));
+ const double PX_19_15 = ((p42)); 
+  const double PX_19_16 = (((-1)*p42+1));
+ const double PX_20_17 = ((p43)); 
+  const double PX_20_18 = (((-1)*p43+1));
+ const double PX_21_19 = ((p44)); 
+  const double PX_21_20 = (((-1)*p44+1));
+ const double PX_22_21 = ((p45)); 
+  const double PX_22_38 = (((-1)*p45+1));
+ const double PX_27_22 = ((p22)); 
+  const double PX_27_23 = (((-1)*p22+1));
+ const double PX_28_24 = ((p23)); 
+  const double PX_28_25 = (((-1)*p23+1));
+ const double PX_29_26 = ((p24)); 
+  const double PX_29_27 = (((-1)*p24+1));
+ const double PX_30_28 = ((p25)); 
+  const double PX_30_36 = (((-1)*p25+1));
+ const double PX_31_29 = ((p12)); 
+  const double PX_31_30 = (((-1)*p12+1));
+ const double PX_32_31 = ((p13)); 
+  const double PX_32_32 = (((-1)*p13+1));
+ const double PX_33_33 = ((p14)); 
+  const double PX_33_34 = (((-1)*p14+1));
+ const double PX_34_35 = ((p15)); 
+  const double PX_34_37 = (((-1)*p15+1));
+
+module f1 
+s : [0 .. 37] init 0; 
+ 
+ [] s=0 -> (PX_0_1):(s'=1) + (PX_0_2):(s'=4); 
+ [] s=1 -> (PX_1_3):(s'=2) + (PX_1_4):(s'=31); 
+ [] s=2 -> (PX_2_5):(s'=7) + (PX_2_6):(s'=27); 
+ [] s=3 -> true; 
+ [] s=4 -> (PX_4_7):(s'=8) + (PX_4_8):(s'=19); 
+ [] s=5 -> true; 
+ [] s=7 -> (PX_7_9):(s'=1) + (PX_7_10):(s'=3) + (PX_7_11):(s'=5); 
+ [] s=8 -> (PX_8_12):(s'=0) + (PX_8_13):(s'=4) + (PX_8_14):(s'=5); 
+ [] s=19 -> (PX_19_15):(s'=8) + (PX_19_16):(s'=20); 
+ [] s=20 -> (PX_20_17):(s'=8) + (PX_20_18):(s'=21); 
+ [] s=21 -> (PX_21_19):(s'=8) + (PX_21_20):(s'=22); 
+ [] s=22 -> (PX_22_21):(s'=8) + (PX_22_38):(s'=37); 
+ [] s=27 -> (PX_27_22):(s'=7) + (PX_27_23):(s'=28); 
+ [] s=28 -> (PX_28_24):(s'=7) + (PX_28_25):(s'=29); 
+ [] s=29 -> (PX_29_26):(s'=7) + (PX_29_27):(s'=30); 
+ [] s=30 -> (PX_30_28):(s'=7) + (PX_30_36):(s'=35); 
+ [] s=31 -> (PX_31_29):(s'=2) + (PX_31_30):(s'=32); 
+ [] s=32 -> (PX_32_31):(s'=2) + (PX_32_32):(s'=33); 
+ [] s=33 -> (PX_33_33):(s'=2) + (PX_33_34):(s'=34); 
+ [] s=34 -> (PX_34_35):(s'=2) + (PX_34_37):(s'=36); 
+ [] s=35 -> true; 
+ [] s=36 -> true; 
+ [] s=37 -> true; 
+ 
+endmodule
+label " prob_f1_s3 "= (s = 3); 
+ label " prob_f1_s5 " = (s = 5); 
+ label " prob_f1_s35 " = (s = 35); 
+ label " prob_f1_s36 " = (s = 36); 
+ label " prob_f1_s37 " = (s = 37); 
+ 
