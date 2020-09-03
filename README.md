@@ -1,10 +1,13 @@
 ## Fast Parametric Model Checking (fPMC) through Model Fragmentation (ICSE 2021 submission)
 
-This README provides an instruction for running fPMC on the models used in the paper
+### Running fPMC
 
-#### -Prerequisites
-1. Install Storm following the instructions from https://www.stormchecker.org/getting-started.html. (Storm version 1.5.1 was used in our experiment) and set STORM_PATH in config.proerties
-2. Setup Java 11.
+#### Prerequisites
+1. Install Storm following the instructions at https://www.stormchecker.org/getting-started.html. 
+(Storm version 1.5.1 was used in our experiment) and set STORM_PATH in config.proerties
+
+2. Install Java 11
+
 3. Link Java runtime libaray (in Eclipse)
    - Find the fPMC.java file in Eclipse Project Explorer (Left window in default setting)
    - Right click ->Run As ->Run Configurations
@@ -14,10 +17,10 @@ This README provides an instruction for running fPMC on the models used in the p
       Name: DYLD_LIBRARY_PATH (OSX); LD_LIBRARY_PATH (Linux)
    
       Value: PATH/TO/WORKSPACE/libs/runtime
-   - Save the setting
+   - Save 
    
-#### -Inputs, (config.properties)
-1. The Parametric models. All the models used in the paper are stored in ~/models/
+#### Inputs, (config.properties)
+1. The pDTMC models (All models used in the paper are available in the models [models](models/) directory
 2. PCTL files for each model. All the PCTL files are stored in  ~/models/
 3. State satisfying the PCTL property. (These states are provided in config.properties)
    - The process to determine such state is 
