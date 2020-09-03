@@ -5,7 +5,17 @@ This README provides an instruction for running fPMC on the models used in the p
 #### -Prerequisites
 1. Install Storm following the instructions from https://www.stormchecker.org/getting-started.html. (Storm version 1.5.1 was used in our experiment) and set STORM_PATH in config.proerties
 2. Setup Java 11.
-
+3. Link Java runtime libaray (in Eclipse)
+   - Find the fPMC.java file in Eclipse Project Explorer (Left window in default setting)
+   - Right click ->Run As ->Run Configurations
+   - Click the Environment in main tab
+   - Click add to include the libaray
+   
+      Name: DYLD_LIBRARY_PATH (OSX); LD_LIBRARY_PATH (Linux)
+   
+      Value: PATH/TO/WORKSPACE/libs/runtime
+   - Save the setting
+   
 #### -Inputs, (config.properties)
 1. The Parametric models. All the models used in the paper are stored in ~/models/
 2. PCTL files for each model. All the PCTL files are stored in  ~/models/
