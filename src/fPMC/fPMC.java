@@ -1,47 +1,38 @@
-package Path_finding;
+package fPMC;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.spg.PrismAPI.PrismParamAPI;
-import org.spg.utils.PrismAPIUtilities;
 
 
 
-public class AlgorithmB {
+public class fPMC {
 	public static void main(String[] args) throws Exception {
 		
 		long timeSpan = System.currentTimeMillis();
-
-/* User setting*/		
-		// set value for alpha
-		int alpha = 5;
-
-//Setting Storm Path in StormEvaluator.jave		
 	
 		
-//Choose one model each time for testing
-		
-/*The use of FX models*/		
+		final String property_file 	= Utility.getProperty("PCTL_FILE");
+		final String model_file 	= Utility.getProperty("pDTMC");
+		int pctl_state 				= Integer.parseInt(Utility.getProperty("PCTL_STATE"));
+		String modelOutputPath 		= Utility.getProperty("OUTPUT");
 
+		final int alpha				= Integer.parseInt(Utility.getProperty("ALPHA"));
+
+		
+		
+//Choose one model each time for testing
+/*The use of FX models*/		
 /*SEQ*/				
 /*Service 1*/	
-		String modelOutputPath = "Model_result/FX/SEQ/service1/";
-		final String property_file = "models/FX/SEQ/prismSEQModel-1_P1_java_property.pctl";
-		final String model_file = "models/FX/SEQ/prismSEQModel-1_P1_java.pm";
-		int pctl_state =10;
-
+//		String modelOutputPath = "Model_result/FX/SEQ/service1/";
+//		final String property_file = "models/FX/SEQ/prismSEQModel-1_P1_java_property.pctl";
+//		final String model_file = "models/FX/SEQ/prismSEQModel-1_P1_java.pm";
+//		int pctl_state =10;
 ///*Service 2*/	
 //		String modelOutputPath = "Model_result/FX/SEQ/service2/";
 //		final String property_file = "models/FX/SEQ/prismSEQModel-2_P1_java_property.pctl";

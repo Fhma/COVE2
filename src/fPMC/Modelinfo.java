@@ -1,4 +1,4 @@
-package Path_finding;
+package fPMC;
 
 public class Modelinfo {
 	public boolean startingPoint;

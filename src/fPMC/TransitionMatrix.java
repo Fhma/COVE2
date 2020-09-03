@@ -1,4 +1,4 @@
-package Path_finding;
+package fPMC;
 
 import java.util.ArrayList;
 import java.util.Arrays;

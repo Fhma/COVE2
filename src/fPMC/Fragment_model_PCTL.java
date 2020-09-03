@@ -1,4 +1,4 @@
-package Path_finding;
+package fPMC;
 
 import java.io.File;
 import java.io.FileNotFoundException;
