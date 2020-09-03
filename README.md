@@ -8,7 +8,7 @@
 
 2. Install Java 11
 
-3. Set the Java runtime libary variable DYLD_LIBRARY_PATH (OSX) or LD_LIBRARY_PATH (Linux)
+3. Set the Java runtime libary variable (DYLD_LIBRARY_PATH in OSX, LD_LIBRARY_PATH in Linux, PATH in Windows)
    - For instance, in Eclipse
       * Find the fPMC.java file in Eclipse Project Explorer (Left window in default setting)
       * Right click > Run As > Run Configurations
