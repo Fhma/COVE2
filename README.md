@@ -15,7 +15,7 @@
       * Click the Environment in main tab
       * Click Add to include the libary
    
-         - Name: DYLD_LIBRARY_PATH (OSX); LD_LIBRARY_PATH (Linux)
+         - Name: DYLD_LIBRARY_PATH (OSX); LD_LIBRARY_PATH (Linux); PATH (Windows)
          - Value: PATH/TO/WORKSPACE/libs/runtime
       * Save 
    
@@ -118,7 +118,7 @@ Running fPMC requires setting the following parameters in the [config.properties
 
    1. PRISM models and PCTL properties for each fragment and the abstract model
  
-   2. **old_model.m: the structure of the input model (transition probabilities are randomly generated for illustration purposes)
+   2. **old_model.m**: the structure of the input model (transition probabilities are randomly generated for illustration purposes)
  
    3. **new_model.m**: the structure of the model after fragmentation, i.e, once fPMC finishes (transition probabilities are randomly generated for illustration purposes)
  
