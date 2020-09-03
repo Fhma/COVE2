@@ -8,18 +8,20 @@
 
 2. Install Java 11
 
-3. Link Java runtime libaray (in Eclipse)
-   - Find the fPMC.java file in Eclipse Project Explorer (Left window in default setting)
-   - Right click ->Run As ->Run Configurations
-   - Click the Environment in main tab
-   - Click add to include the libaray
+3. Set the Java runtime libary variable DYLD_LIBRARY_PATH (OSX) or LD_LIBRARY_PATH (Linux)
+   - For instance, in Eclipse
+      * Find the fPMC.java file in Eclipse Project Explorer (Left window in default setting)
+      * Right click > Run As > Run Configurations
+      * Click the Environment in main tab
+      * Click Add to include the libary
    
-      Name: DYLD_LIBRARY_PATH (OSX); LD_LIBRARY_PATH (Linux)
+         - Name: DYLD_LIBRARY_PATH (OSX); LD_LIBRARY_PATH (Linux)
+         - Value: PATH/TO/WORKSPACE/libs/runtime
+      * Save 
    
-      Value: PATH/TO/WORKSPACE/libs/runtime
-   - Save 
-   
-### Inputs (set in [config.properties](config.properties) file)
+### Inputs
+Running fPMC requires setting the following parameters in the [config.properties](config.properties) file
+
 1. The STORM_PATH to the storm-pars location (e.g., STORM_PATH = /usr/local/bin/storm-pars)
 
 2. The threshold α value
@@ -112,15 +114,20 @@
    * We are also developing a prototype tool to automatically extract these which will be included in the next fPMC version.  
     
  ### Outputs
- 1. PRISM models and PCTL properties for each fragment and the abstract model
- 2. **old_model.m: the structure of the input model (transition probabilities are randomly generated for illustration purposes)
- 3. **new_model.m**: the structure of the model after fragmentation, i.e, once fPMC finishes (transition probabilities are randomly generated for illustration purposes)
- 4. **Model_expression.txt**: detailed information about the fragmentation process, i.e., 
-    - Original Transition Matrix
-    - New Tranistion Matrix after fragmentation
-    - State property for each state in the model
-    - Transition Matrix for each fragment 
-    - __The algebraic expressions__
+ Once fPMC finishes, it will generate the following outputs:
+
+   1. PRISM models and PCTL properties for each fragment and the abstract model
+ 
+   2. **old_model.m: the structure of the input model (transition probabilities are randomly generated for illustration purposes)
+ 
+   3. **new_model.m**: the structure of the model after fragmentation, i.e, once fPMC finishes (transition probabilities are randomly generated for illustration purposes)
+ 
+   4. **Model_expression.txt**: detailed information about the fragmentation process, i.e., 
+      - Original Transition Matrix
+      - New Tranistion Matrix after fragmentation
+      - State property for each state in the model
+      - Transition Matrix for each fragment 
+      - __The algebraic expressions__
  
  
    
