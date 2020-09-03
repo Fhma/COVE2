@@ -1,10 +1,10 @@
-## Fast Parametric Model Checking (fPMC) through Model Fragmentation (ICSE 2021 submission)
+# Fast Parametric Model Checking (fPMC) through Model Fragmentation (ICSE 2021 submission)
 
-### Running fPMC
+## Running fPMC
 
-#### Prerequisites
+### Prerequisites
 1. Install Storm following the instructions at https://www.stormchecker.org/getting-started.html. 
-(Storm version 1.5.1 was used in our experiment) and set STORM_PATH in config.proerties
+(Storm version 1.5.1 was used in our experiment)
 
 2. Install Java 11
 
@@ -19,10 +19,18 @@
       Value: PATH/TO/WORKSPACE/libs/runtime
    - Save 
    
-#### Inputs, (config.properties)
-1. The pDTMC models (All models used in the paper are available in the [models](models) directory
-2. PCTL property file for each pDTMC (All PCTL files are available in the [models](models) directory
-3. State satisfying the PCTL property. These states should be provided in the config.properties
+### Inputs (set in [config.properties](config.properties) file)
+1. The STORM_PATH to the storm-pars location (e.g., STORM_PATH = /usr/local/bin/storm-pars)
+
+2. The threshold α value
+
+5. The path where output files will be stored
+
+3. The pDTMC models (All models used in the paper are available in the [models](models) directory
+
+4. PCTL property file for each pDTMC (All PCTL files are available in the [models](models) directory
+
+5. State satisfying the PCTL property. These states should be provided in the config.properties
    - The process to determine such state includes:
       
       1) Loading the model into PRISM (GUI); 
@@ -102,12 +110,8 @@
    * Note that multiple pDTMC states may satisfy the PCTL property.
    
    * We are also developing a prototype tool to automatically extract these which will be included in the next fPMC version.  
-   
- 4. The threshold α value
-
-5. The path where output files will be stored
- 
- #### Outputs
+    
+ ### Outputs
  1. PRISM models and PCTL properties for each fragment and the abstract model
  2. **old_model.m: the structure of the input model (transition probabilities are randomly generated for illustration purposes)
  3. **new_model.m**: the structure of the model after fragmentation, i.e, once fPMC finishes (transition probabilities are randomly generated for illustration purposes)
