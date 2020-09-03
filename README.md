@@ -20,22 +20,22 @@
    - Save 
    
 #### Inputs, (config.properties)
-1. The pDTMC models (All models used in the paper are available in the models [models](models/) directory
-2. PCTL files for each model. All the PCTL files are stored in  ~/models/
-3. State satisfying the PCTL property. (These states are provided in config.properties)
-   - The process to determine such state is 
+1. The pDTMC models (All models used in the paper are available in the [models](models) directory
+2. PCTL property file for each pDTMC (All PCTL files are available in the [models](models) directory
+3. State satisfying the PCTL property. These states should be provided in the config.properties
+   - The process to determine such state includes:
       
-      1) load the model into PRISM using xprism (GUI); 
+      1) Loading the model into PRISM (GUI); 
       
-      2) Output the state.sta by clicking the tab (model -> Export -> States -> Plain text file); 
+      2) Exporting the states into a file (e.g., state.sta) by selecting Model > Export -> States -> Plain text file 
       
-      3) Provide random transitions probabilies [0-1] that satisfy the requirement for the output states.sta; 
+      3) Providing random transitions probabilies [0-1] that satisfy the requirement for the output states 
       
-      4) Open the states.sta and manually check what state satisfies the PCTL property.
+      4) Opening the saved file (states.sta) and manually checking what state satisfies the PCTL property.
      
-     Using the model of the running exmaple in the paper as an exnaple. The PCTL file specifies P=?[F state = WF_SUCC] and the model declares int WF_SUCC=10
+     For example, using the model of the FX service-based system running exmaple in the paper, the PCTL property is P=?[F state = WF_SUCC], where WF_SUCC=10
      
-     The state.sta looks as follow:
+     The state.sta looks as follows:
      
      (inter,retry,op1,op2,op3,op4,op5,op6,state)
      
@@ -97,20 +97,21 @@
       
       28:(1,2,2,1,1,1,1,1,1)
      
-     From the example, we can idenfy that state 9 in graph satisfying the P=?[F state =10] as __9__:(1,1,1,1,1,1,1,1,__10__) 
+     From the example, we can idenfy that state 9 satisfies the PCTL property P=?[F state =10] since state  __9__:(1,1,1,1,1,1,1,1,__10__) 
    
-   - It could end up with the multiple states in the graph satisfying the PCTL but only a single state is requried for the models that we tested.
+   * Note that multiple pDTMC states may satisfy the PCTL property.
    
-   - We also developed an automatic tool to extract thses states but it is not included in this version of fPMC.   
+   * We are also developing a prototype tool to automatically extract these which will be included in the next fPMC version.  
    
- 4. The Alpha value.  
- 5. The Path that output files will be stored
+ 4. The threshold α value
+
+5. The path where output files will be stored
  
- #### -Outputs
+ #### Outputs
  1. PRISM models and PCTL properties for each fragment and the abstract model
- 2. old_model.m is the structure of the input model (transition probability is random numbers).
- 3. new_model.m is the structure of the model after fragmentation (transition probability is random numbers).
- 4. Model_expression.txt stores the detailed information about the fragmentation process
+ 2. **old_model.m: the structure of the input model (transition probabilities are randomly generated for illustration purposes)
+ 3. **new_model.m**: the structure of the model after fragmentation, i.e, once fPMC finishes (transition probabilities are randomly generated for illustration purposes)
+ 4. **Model_expression.txt**: detailed information about the fragmentation process, i.e., 
     - Original Transition Matrix
     - New Tranistion Matrix after fragmentation
     - State property for each state in the model
