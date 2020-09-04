@@ -130,8 +130,23 @@ Running fPMC requires setting the following parameters in the [config.properties
       - __The algebraic expressions__
  
  
+## ICSE 2021 Evaluation Result in detail
+
+   1. All the results that were used in the paper are stored in the ~/ICSE_2021_Result/.
+
+   2. The results are presented in the same format as described in __Running fPMC / Outputs__.
    
-   
+   3. A matlab script(Structure_visualization.m) is provided for the visulization of the model structure.
+      
+      - The script was tested in MATLAB 2019b.
+      
+      - Copy everything in old_model.m or new_model.m (one at a time) into the highlighted areas in the Structure_visualization.m. 
+      
+      - Run the script. 
+      
+      - The colour in the output figure differenciates the fragments. 
+      
+  
    
    
    
