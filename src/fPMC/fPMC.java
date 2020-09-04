@@ -635,7 +635,7 @@ public class fPMC {
 
 				// Add the Parameter and expression together
 				noDups_Param_declare_array.addAll(matlab_content);
-				String Model_expression = String.format(location.getPath() + File.separatorChar + "Model_expression");
+				String Model_expression = String.format(location.getPath() + File.separatorChar + "Model_expression.txt");
 				
 				for (String s : noDups_Param_declare_array) {
 					ArrayListString_model_expression += s + "\n";
