@@ -32,7 +32,7 @@ Running fPMC requires setting the following parameters in the [config.properties
 
 4. PCTL property file for each pDTMC (All PCTL files are available in the [models](models) directory
 
-5. State satisfying the PCTL property. These states should be provided in the config.properties
+5. State satisfying the PCTL property. These states for all the models are provided in the config.properties as #PCTL_STATE
    - The process to determine such state includes:
       
       1) Loading the model into PRISM (GUI); 
