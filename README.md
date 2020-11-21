@@ -1,7 +1,7 @@
 # Fast Parametric Model Checking (fPMC) through Model Fragmentation (ICSE 2021 submission)
 
 ## fPMC Soundness
-We developed a  proof of fPMC soundness that is available [here](papers/ICSE_2021.pdf). We will include this proof in the final paper.
+We developed a  proof of fPMC soundness that is available [here](paper/fPMCproof.pdf). We will include this proof in the final paper.
 
 ## Running fPMC
 
