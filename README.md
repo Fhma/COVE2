@@ -1,4 +1,5 @@
 # Fast Parametric Model Checking (fPMC) through Model Fragmentation (ICSE 2021 submission)
+[![DOI](https://zenodo.org/badge/288981310.svg)](https://zenodo.org/badge/latestdoi/288981310)
 
 ## Repository Content
 1. fPMC Soundness: we developed a  proof of fPMC soundness that is available [here](paper/fPMCproof.jpg).
